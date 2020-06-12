@@ -14,7 +14,7 @@ public class Task1 {
         int quantity = scanner.nextInt();
 
         int sum = price * quantity;
-        System.out.println("К оплате " + sum + " руб.12");
+        System.out.println("К оплате " + sum + " руб.");
 
 
     }

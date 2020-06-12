@@ -12,9 +12,14 @@ public class Task3 {
 
         int sec = scanner.nextInt();
 
-        double hour = sec / 3600.0;
+        int hour =  (sec / 3600);
+        double min = sec % 3600;
+        int min2 = (int) (min  / 60);
 
-        System.out.println( sec + "  ceкунд это " + hour + " час.");
+
+
+        System.out.println( sec + "  ceкунд это " + hour + " час " + min2 + " минут.");
+
 
 
     }
