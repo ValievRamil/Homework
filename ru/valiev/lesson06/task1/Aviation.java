@@ -1,11 +1,11 @@
-package ru.valiev.lesson05.task1;
+package ru.valiev.lesson06.task1;
 
 public class Aviation  {
     private String model;
     private int maxSpeed;
     private int yearOfManufacture;
 
-    protected Aviation(String model, int maxSpeed, int yearOfManufacture) {
+     Aviation(String model, int maxSpeed, int yearOfManufacture) {
         this.model = model;
         this.maxSpeed = maxSpeed;
         this.yearOfManufacture = yearOfManufacture;

@@ -1,4 +1,4 @@
-package ru.valiev.lesson05.task1;
+package ru.valiev.lesson06.task1;
 
 public interface Flyable {
 
