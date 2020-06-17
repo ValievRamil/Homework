@@ -4,10 +4,10 @@ package ru.valiev.lesson02.Task2;
 
 public class Task2 {
     public static void main(String[] args) {
-        double zarplata = 70000;
-        double ndfl = zarplata * 0.13;
+        int salary = 70000;
+        int ndfl = (int) (salary * 0.13);
 
-        System.out.println("При зарплате в " + zarplata + " руб. \" на руки \" получаешь " + (zarplata - ndfl) + " руб.");
+        System.out.println("При зарплате в " + salary + " руб. \" на руки \" получаешь " + (salary- ndfl) + " руб.");
 
     }
 }
