@@ -8,6 +8,6 @@ public class FixedWing extends Aviation implements Flyable {
 
     @Override
     public void fly() {
-        System.out.println("Я лечу: ЖЖЖЖЖЖЖЖЖЖ");
+        System.out.println("Самолет " + getModel() + " " + getYearOfManufacture() + " года выпуска взлетел!");
     }
 }

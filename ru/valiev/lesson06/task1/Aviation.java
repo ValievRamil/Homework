@@ -11,6 +11,18 @@ public class Aviation  {
         this.yearOfManufacture = yearOfManufacture;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public int getYearOfManufacture() {
+        return yearOfManufacture;
+    }
+
     public static void main(String[] args) {
         Rotorcraft helicopter = new Rotorcraft("Ansat",275,2010);
         helicopter.fly();

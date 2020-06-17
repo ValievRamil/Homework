@@ -10,7 +10,7 @@ public class Rotorcraft extends Aviation implements Flyable {
 
     @Override
     public void fly() {
-        System.out.println("Я лечу: Тр - Тр - Тр");
+        System.out.println("Вертолет  " +getModel() + " " + getYearOfManufacture() + " года выпуска взлетел!");
     }
 
 }
