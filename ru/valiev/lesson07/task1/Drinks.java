@@ -1,6 +1,6 @@
 package ru.valiev.lesson07.task1;
 
-public enum Drinks {
+public enum Drinks  {
     COLA(1),
     SPRITE(3),
     JUICE(4),

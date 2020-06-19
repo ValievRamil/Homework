@@ -10,6 +10,7 @@ public class VendingMachine {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("MENU:");
+        System.out.println("0. EXIT");
         System.out.println("1. " + Drinks.COLA + " -    " + COLA.getPrise() + "$");
         System.out.println("2. " + Drinks.SPRITE + " -  " + SPRITE.getPrise() + "$");
         System.out.println("3. " + Drinks.JUICE + " -   " + JUICE.getPrise() + "$");
@@ -33,36 +34,39 @@ public class VendingMachine {
 
         while (true) {
             int select = scanner.nextInt();
-            if (select > 5 || select < 1) {
+            if (select == 0) {
+                System.out.println("Buy Buy");
+            }else if (select > 5 || select < 1) {
                 System.out.println("Number is not correct. Please try again!");
 
             }else if (select == 1 & deposit >= COLA.getPrise()) {
                 System.out.println("Please, take your: " + COLA);
                 deposit = deposit - COLA.getPrise();
                 System.out.println("Deposit =  " + deposit + "$");
-                break;
+
             } else  if (select == 2 & deposit >= SPRITE.getPrise()) {
                 System.out.println("Please, take your: " + SPRITE);
                 deposit = deposit - SPRITE.getPrise();
                 System.out.println("Deposit =  " + deposit + "$");
-                break;
+
             } else  if (select == 3 & deposit >= JUICE.getPrise()) {
                 System.out.println("Please, take your: " + JUICE);
                 deposit = deposit - JUICE.getPrise();
                 System.out.println("Deposit =  " + deposit + "$");
-                break;
+
             } else if (select == 4 & deposit >= FANTA.getPrise()) {
                 System.out.println("Please, take your: " + FANTA);
                 deposit = deposit - FANTA.getPrise();
                 System.out.println("Deposit =  " + deposit + "$");
-                break;
+
             } else if (select == 5 & deposit >= MIRINDA.getPrise()) {
                 System.out.println("Please, take your: " + MIRINDA);
                 deposit = deposit - MIRINDA.getPrise();
                 System.out.println("Deposit =  " + deposit + "$");
-                break;
+
             } else {
-                System.out.println("Insufficient funds. Please, choice other drink!");
+                System.out.println("Insufficient funds. Please, choice other drink or press 0 for EXIT");
+                break;
 
             }
         }
