@@ -35,7 +35,8 @@ public class VendingMachine {
         while (true) {
             int select = scanner.nextInt();
             if (select == 0) {
-                System.out.println("Buy Buy");
+                System.out.println("Buy Buy!!!");
+                break;
             }else if (select > 5 || select < 1) {
                 System.out.println("Number is not correct. Please try again!");
 
@@ -66,7 +67,7 @@ public class VendingMachine {
 
             } else {
                 System.out.println("Insufficient funds. Please, choice other drink or press 0 for EXIT");
-                break;
+
 
             }
         }
