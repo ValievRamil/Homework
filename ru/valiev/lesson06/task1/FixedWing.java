@@ -10,4 +10,8 @@ public class FixedWing extends Aviation implements Flyable {
     public void fly() {
         System.out.println("Самолет " + getModel() + " " + getYearOfManufacture() + " года выпуска взлетел!");
     }
+
+    public void katapult () {
+        System.out.println("Успешно катапультировался");
+    }
 }

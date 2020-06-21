@@ -13,4 +13,8 @@ public class Rotorcraft extends Aviation implements Flyable {
         System.out.println("Вертолет  " +getModel() + " " + getYearOfManufacture() + " года выпуска взлетел!");
     }
 
+    public void autorotation () {
+        System.out.println(" Успешно приземлился");
+    }
+
 }
