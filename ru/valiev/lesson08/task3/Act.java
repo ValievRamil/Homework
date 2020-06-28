@@ -1,9 +1,9 @@
 package ru.valiev.lesson08.task3;
 
 public class Act {
-    private static int  number;
-    private static String date;
-    private static String[] products;
+    private int number;
+    private String date;
+    private String[] products;
 
     public Act(int number, String date, String[] products) {
         this.number = number;
@@ -12,27 +12,27 @@ public class Act {
     }
 
 
-    public static int getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public static void setNumber(int number) {
-        Act.number = number;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public static String getDate() {
+    public String getDate() {
         return date;
     }
 
-    public static void setDate(String date) {
-        Act.date = date;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public static String[] getProducts() {
+    public String[] getProducts() {
         return products;
     }
 
-    public static void setProducts(String[] products) {
-        Act.products = products;
+    public void setProducts(String[] products) {
+        this.products = products;
     }
 }

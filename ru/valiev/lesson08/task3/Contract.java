@@ -1,37 +1,37 @@
 package ru.valiev.lesson08.task3;
 
 public class Contract {
-    private static int number;
-    private  static String date;
-    private static String [] products;
+    private int number;
+    private String date;
+    private String[] products;
 
-    public Contract( int number, String date,String [] products) {
+    public Contract(int number, String date, String[] products) {
         this.number = number;
         this.date = date;
         this.products = products;
     }
 
-    public static int getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public static void setNumber(int number) {
-        Contract.number = number;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public static String getDate() {
+    public String getDate() {
         return date;
     }
 
-    public static void setDate(String date) {
-        Contract.date = date;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public static String[] getProducts() {
+    public String[] getProducts() {
         return products;
     }
 
-    public static void setProducts(String[] products) {
-        Contract.products = products;
+    public void setProducts(String[] products) {
+        this.products = products;
     }
 }

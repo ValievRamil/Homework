@@ -13,12 +13,12 @@ public class Main {
 
         System.out.println("Создан новый договор. № " + contract.getNumber() + "от " + contract.getDate());
 
-        System.out.println("Наименование продуктов: " + Arrays.toString(Contract.getProducts()));
+        System.out.println("Наименование продуктов: " + Arrays.toString(contract.getProducts()));
 
-        toConvert.convert(contract);
+        Act act = toConvert.convert(contract);
         System.out.println("Конвертация договора в Акт произведена!");
-        System.out.println("Акт № " + Act.getNumber() + " от " + Act.getDate());
-        System.out.println("Наименование продуктов: " + Arrays.toString(Act.getProducts()));
+        System.out.println("Акт № " + act.getNumber() + " от " + act.getDate());
+        System.out.println("Наименование продуктов: " + Arrays.toString(act.getProducts()));
 
 
 
