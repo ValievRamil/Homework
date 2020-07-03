@@ -12,8 +12,9 @@ public class Child {
         System.out.println(Food.CARROT);
         System.out.println(Food.APRICOT);
         System.out.println(Food.PORRIDGE);
-        String str = scanner.nextLine();
+
         while (true) {
+            String str = scanner.nextLine();
             if (str.equalsIgnoreCase(String.valueOf(Food.APPLE))) {
                 food = Food.APPLE;
                 break;
@@ -26,6 +27,8 @@ public class Child {
             } else if (str.equalsIgnoreCase(String.valueOf(Food.PORRIDGE))) {
                 food = Food.PORRIDGE;
                 break;
+            }   else {
+                System.out.println("Incorrect Input, please try again!");
             }
         }
     }
