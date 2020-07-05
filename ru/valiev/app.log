@@ -1,0 +1,3 @@
+2020-07-05 16:19:27,099 WARN r.v.l.VendingMachine [main] 1 
+2020-07-05 16:19:29,048 WARN r.v.l.VendingMachine [main] Insufficient funds. Please, choice other drink or press 0 for EXIT 
+2020-07-05 16:19:30,312 WARN r.v.l.VendingMachine [main] Number is not correct. Please try again! 
