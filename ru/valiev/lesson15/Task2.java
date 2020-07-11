@@ -1,23 +1,33 @@
 package ru.valiev.lesson15;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class Task2 {
+    static StringBuilder gap = new StringBuilder("-");
+
     public static void DirList(File fileName) {
-        File file = new File(String.valueOf(fileName));
-        File folder = file.getParentFile();
-        if (file.isDirectory()) {
-            System.out.println(file.getName() + " является каталогом");
-            for (File dir : file.listFiles()) {
-                System.out.println(dir.getName());
+        for (File dir : fileName.listFiles()) {
+            System.out.println(gap + dir.getName());
+            if (dir.isDirectory()) {
+                gap.append('-');
                 DirList(dir);
             }
         }
-
+        gap.deleteCharAt(0);
     }
 
     public static void main(String[] args) {
-        DirList(new File(args[0]));
+        System.out.println("Путь к папке:");
+        Scanner s = new Scanner(System.in);
+        String path = s.nextLine();
+        File dir = new File(path);
+        if (!dir.exists()) {
+            System.out.println("Папки с введеным именем не существует!");
+        } else if (!dir.isDirectory()) {
+            System.out.println("Не является папкой!");
+        } else {
+            DirList(dir);
+        }
     }
-
 }
