@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class Methods {
 
     public static void printInterface() {
-        System.out.println("Программа Библиотека");
-        System.out.println("Нажмите 1 для просмотра содержимого библиотеки");
-        System.out.println("Нажмите 2 для просмотра добавления книги");
-        System.out.println("Нажмите 3 для выхода");
+        System.out.println("Welcome yo the LIBRARY!");
+        System.out.println("Press 1 to view library contents.");
+        System.out.println("Press 2 to add a book.");
+        System.out.println("Press 3 to exit.");
     }
 
     public static void addBook() {
@@ -31,11 +31,11 @@ public class Methods {
                 printInterface();
                 break;
                 case 2: {
-                    System.out.println("Введите название книги:");
+                    System.out.println("Please, enter book title:");
                     String name = sc.next();
-                    System.out.println("Введите автора:");
-                    String author = sc.next();
-                    System.out.println("Введите год издания:");
+                    System.out.println("Please, enter author name:");
+                    String author = sc.nextLine();
+                    System.out.println("Please, enter the year of publication:");
                     String year = sc.next();
                     books.add(new Book(name, author, year));
                     try (OutputStream os = new FileOutputStream("library.dat");
@@ -65,7 +65,7 @@ public class Methods {
                 System.out.println(ex);
             }
         }
-        System.out.println("Библиотека пуста");
+        System.out.println("Library is empty");
         return new ArrayList<>();
     }
 }
