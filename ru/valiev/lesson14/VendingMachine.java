@@ -17,65 +17,76 @@ public class VendingMachine {
 
 
         Scanner scanner = new Scanner(System.in);
-       log.info("MENU:");
-       log.info("0. EXIT");
-       log.info("1. " + COLA + " -    " + COLA.getPrise() + "$");
-       log.info("2. " + Drinks.SPRITE + " -  " + SPRITE.getPrise() + "$");
-       log.info("3. " + Drinks.JUICE + " -   " + JUICE.getPrise() + "$");
-       log.info("4. " + Drinks.FANTA + " -   " + FANTA.getPrise() + "$");
-       log.info("5. " + Drinks.MIRINDA + " - " + MIRINDA.getPrise() + "$");
+        System.out.println("MENU:");
+        System.out.println("0. EXIT");
+        System.out.println("1. " + COLA + " -    " + COLA.getPrise() + "$");
+        System.out.println("2. " + Drinks.SPRITE + " -  " + SPRITE.getPrise() + "$");
+        System.out.println("3. " + Drinks.JUICE + " -   " + JUICE.getPrise() + "$");
+        System.out.println("4. " + Drinks.FANTA + " -   " + FANTA.getPrise() + "$");
+        System.out.println("5. " + Drinks.MIRINDA + " - " + MIRINDA.getPrise() + "$");
 
 
-        log.info("Make a doposit to select a drink!");
+        System.out.println("Make a doposit to select a drink!");
         int deposit = scanner.nextInt();
-        log.warn(deposit);
+
          while (true) {
             if (deposit < 1) {
-                log.info("Make a deposit!!!");
+                System.out.println("Make a deposit!!!");
+                log.warn("Trying to buy without making a deposit");
+
                 deposit = scanner.nextInt();
             } else {
-                log.info("You input " + deposit + "$");
+                System.out.println("You input " + deposit + "$");
+                log.warn("Customer paid" + deposit + "$" );
                 break;
             }
         }
 
-        log.info("Please, choise a drink");
+        System.out.println("Please, choise a drink");
 
         while (true) {
             int select = scanner.nextInt();
             if (select == 0) {
-                log.info("Buy Buy!!!");
+                System.out.println("Buy Buy!!!");
+                log.warn("Buyer finished the purchase");
                 break;
             }else if (select > 5 || select < 1) {
-                log.warn("Number is not correct. Please try again!");
+                System.out.println("Number is not correct. Please try again!");
+                log.warn("Incorrect number entered");
 
             }else if (select == 1 & deposit >= COLA.getPrise()) {
-                log.info("Please, take your: " + COLA);
+                System.out.println("Please, take your: " + COLA);
+                log.warn("Customer bought " + COLA);
                 deposit = deposit - COLA.getPrise();
-                log.info("Deposit =  " + deposit + "$");
+                System.out.println("Deposit =  " + deposit + "$");
 
             } else  if (select == 2 & deposit >= SPRITE.getPrise()) {
-                log.info("Please, take your: " + SPRITE);
+                System.out.println("Please, take your: " + SPRITE);
+                log.warn("Customer bought " + SPRITE);
                 deposit = deposit - SPRITE.getPrise();
-                log.info("Deposit =  " + deposit + "$");
+                System.out.println("Deposit =  " + deposit + "$");
 
             } else  if (select == 3 & deposit >= JUICE.getPrise()) {
-                log.info("Please, take your: " + JUICE);
+                System.out.println("Please, take your: " + JUICE);
+                log.warn("Customer bought " + JUICE);
                 deposit = deposit - JUICE.getPrise();
-                log.info("Deposit =  " + deposit + "$");
+                System.out.println("Deposit =  " + deposit + "$");
 
             } else if (select == 4 & deposit >= FANTA.getPrise()) {
-                log.info("Please, take your: " + FANTA);
+                System.out.println("Please, take your: " + FANTA);
+                log.warn("Customer bought " + FANTA);
                 deposit = deposit - FANTA.getPrise();
-                log.info("Deposit =  " + deposit + "$");
+                System.out.println("Deposit =  " + deposit + "$");
 
             } else if (select == 5 & deposit >= MIRINDA.getPrise()) {
-                log.info("Please, take your: " + MIRINDA);
+                System.out.println("Please, take your: " + MIRINDA);
+                log.warn("Customer bought " + MIRINDA);
                 deposit = deposit - MIRINDA.getPrise();
-                log.info("Deposit =  " + deposit + "$");
+                System.out.println("Deposit =  " + deposit + "$");
 
             } else {
-                log.warn("Insufficient funds. Please, choice other drink or press 0 for EXIT");
+                System.out.println("Insufficient funds. Please, choice other drink or press 0 for EXIT");
+                log.warn("Insufficient funds.");
 
 
             }
