@@ -7,32 +7,30 @@ import java.util.List;
 public class CustomerBasket implements Basket {
     private List<Product> products = new ArrayList<>();
 
-    @Override
-    public void addProduct(String product, int quantity) {
-        boolean productIsAbsentInBasket = true;
-        if (!products.isEmpty()) {
-            for (Product pr : products) {
-                if (pr.getName().equals(product)) {
-                    productIsAbsentInBasket = false;
-                    pr.setQuantity(pr.getQuantity() + quantity);
-                }
+    private Product getProduct (String name) {
+        for (Product pr : products) {
+            if (pr.getName().equals(name)) {
+            return  pr;
             }
         }
-        if (productIsAbsentInBasket) products.add(new Product(product, quantity));
+        return null;
+    }
+
+    @Override
+    public void addProduct(String productName, int quantity) {
+
+       Product product = getProduct(productName);
+       if (product == null) {
+           product = new Product(productName,quantity);
+           products.add(product);
+       }
+         product.setQuantity(product.getQuantity() + quantity);
     }
 
     @Override
     public void removeProduct(String product) {
-        int index = 0;
-        if (!products.isEmpty()) {
+        products.removeIf(p -> p.getName().equals(product));
 
-            for (Product pr : products) {
-                if (pr.getName().equals(product)) {
-                    index = products.indexOf(pr);
-                }
-            }
-            products.remove(index);
-        }
     }
 
     @Override
