@@ -15,7 +15,7 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        int n = 10;
+        int n = 50;
         Task2 task2 = new Task2();
         for (int i = 0; i <= n; i++) {
             System.out.print(task2.fibonacci(i) + " ");

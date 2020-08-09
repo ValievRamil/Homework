@@ -4,20 +4,24 @@ import java.util.Scanner;
 
 public class Task1 {
     public void fibanacci(int n) {
-        int array[] = new int[n];
-
-        for (int i = 0; i <n; i++) {
-            if (i == 0) array[i] = 0;
-            if (i == 1) array[i] = 1;
-            if (i > 1) array[i] = array[i - 1] + array[i - 2];
-            System.out.print(array[i] + " ");
+        int t0 = 0;
+        int t1 = 1;
+        int t2;
+        System.out.print(t0+" "+t1+" ");
+        for(int i = 3; i <= n; i++){
+            t2=t0+t1;
+            System.out.print(t2+" ");
+            t0=t1;
+            t1=t2;
         }
+        System.out.println();
     }
+
 
 
     public static void main(String[] args) {
         Task1 task1 = new Task1();
-        task1.fibanacci(10);
+        task1.fibanacci(20);
     }
 }
 
